@@ -1,0 +1,70 @@
+.dialog {
+    display: none; position:absolute;
+    width: 300px;
+    height:35px;
+    background: #003E4D;
+    left:20px;
+    top:10px;
+    color:#ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 2px;
+}
+
+.img_person {
+    float: left;
+    margin: 0px 3px 3px 0px;
+}
+
+
+.money_set {
+    display: none;
+    position:absolute;
+    top:120px;
+    left:190px;
+    color:#ffffff;
+    font-weight: bold;
+    background: #003E4D;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 2px;
+}
+
+#progressBar {
+
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 103px;
+
+    width: 300px;
+    height: 25px;
+    background: url('preloader.png');
+    position:relative;
+}
+
+#backLoader {
+
+    position: absolute;
+
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    padding-right: 20px;
+
+    line-height: 25px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background: url('loadItem.png') no-repeat right;
+
+}
+
+#progressBar div {
+
+    text-align: right;
+    margin-right: 30px;
+    overflow: hidden;
+    line-height: 25px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+
+}

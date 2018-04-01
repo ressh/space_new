@@ -1,0 +1,70 @@
+.pc_container {
+    width: 520px;
+    height: 250px;
+    padding: 15px 1px 47px 1px;
+    margin: 0px auto;
+}
+
+.pc_container .pc_item {
+    margin-top: 15px;
+    margin-left: 1px;
+    width: 520px;
+    height: 250px;
+}
+
+.pc_container .pc_bar_container {
+    position: absolute;
+    top: 280px;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    overflow:visible;
+}
+
+.desc {
+    color:#ffffff;
+}
+
+.pc_bar_container_underflow {
+    width: 90000px;
+    overflow: visible;
+}
+
+.pc_bar_container_overflow {
+    overflow: hidden;
+    position: absolute;
+    top: 280px;
+    color: white;
+    margin: 0px 10px 0px 10px;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.left, .center, .right {
+    background-position: left;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-size: 1px;
+    float: left;
+}
+
+.bar {
+    background-position: left;
+    overflow: hidden;
+    font-size: 1px;
+    float: left;
+}
+
+.pc_item .desc {
+    position: absolute;
+    width: 250px;
+    padding: 10px;
+    height: 180px;
+    line-height: 1.8em;
+    right: 0px;
+
+}
+
+.pc_item .desc h1 {
+    color: red;
+}

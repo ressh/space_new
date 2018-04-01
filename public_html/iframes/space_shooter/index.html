@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Space Invaders</title>
+    <link href='style.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div id='cont'>
+      <div class='top-info'>
+        <div id='lives'>
+          <img src='images/life.png'>
+          <img src='images/life.png'>
+          <img src='images/life.png'>
+        </div>
+        <div class='info-level'>
+          LEVEL
+          <div id='info_level'>1</div>
+        </div>
+        <div id='mute'>ЗВУК</div>
+        <a class='github' href='/'>МОЙ КОРАБЛЬ</a>
+      </div>
+      <div id='intro'>
+        <div class='controls'>
+          <img src='images/keys.png'>
+          <div class='space'>Стрелять - "ПРОБЕЛ"</div>
+          <div class='arrows'>Двигаться - "СТРЕЛОЧКАМИ"</div>
+        </div>
+        <div class='start'>Нажми "ПРОБЕЛ" чтобы начать</div>
+      </div>
+      <div id='loading'>
+        <div class='title'>loading...</div>
+      </div>
+      <div id='game_over'>
+        <div class='bg'></div>
+        <div class='center'>
+          <div class='title'>GAME OVER</div>
+          <div class='continue'>Press space to continue</div>
+        </div>
+      </div>
+      <div id='levelup'>
+        <div class='bg'></div>
+        <div class='title'>
+          LEVEL
+          <div id='ingame_level'>1</div>
+        </div>
+      </div>
+      <canvas height='500' id='game_screen' width='1000'>
+        Your browser does not support canvas technology. Please try again with a different browser.
+      </canvas>
+    </div>
+    <script src='sounds/howler.js'></script>
+    <script src='script.js'></script>
+  </body>
+</html>

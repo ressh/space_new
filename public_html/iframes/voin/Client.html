@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CreateJS export from Client</title>
+
+<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.3.0.min.js"></script>
+<script src="Client.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var manifest = [
+		{src:"images/back.jpg", id:"back"},
+		{src:"images/bang.png", id:"bang"},
+		{src:"images/Bitmap1.jpg", id:"Bitmap1"},
+		{src:"images/body.png", id:"body"},
+		{src:"images/bullet.png", id:"bullet"},
+		{src:"images/bullet2.png", id:"bullet2"},
+		{src:"images/china.png", id:"china"},
+		{src:"images/edw.png", id:"edw"},
+		{src:"images/gun.png", id:"gun"},
+		{src:"images/gun3.png", id:"gun3"},
+		{src:"images/ino.png", id:"ino"},
+		{src:"images/movement2.png", id:"movement2"},
+		{src:"images/myShip2.png", id:"myShip2"},
+		{src:"images/right_btn.jpg", id:"right_btn"},
+		{src:"images/shipkadavr.png", id:"shipkadavr"},
+		{src:"images/shipkadavr1.png", id:"shipkadavr1"},
+		{src:"images/shipkadavr2.png", id:"shipkadavr2"},
+		{src:"images/weffwef.png", id:"weffwef"}
+	];
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete() {
+	exportRoot = new lib.Client();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(24);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="428" height="280" style="background-color:#000000"></canvas>
+</body>
+</html>
